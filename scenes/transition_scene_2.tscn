@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://irvj8id6h7gy"]
+
+[ext_resource type="Script" uid="uid://ddi6vo78ultb1" path="res://scenes/transition_scene_2.gd" id="1_8ivry"]
+[ext_resource type="Texture2D" uid="uid://ehk74oke31rh" path="res://assets/transicao2.png" id="1_c3gin"]
+[ext_resource type="AudioStream" uid="uid://dfx76fvokuw77" path="res://sounds/write_transitions2.ogg" id="3_aqydm"]
+
+[node name="TransitionScene2" type="Node2D" unique_id=27732901]
+script = ExtResource("1_8ivry")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1464537325]
+
+[node name="BlackBG" type="ColorRect" parent="CanvasLayer" unique_id=1856660375]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Image" type="TextureRect" parent="CanvasLayer" unique_id=1572629918]
+texture_filter = 1
+offset_left = 281.0
+offset_right = 2261.0
+offset_bottom = 1253.3333
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_c3gin")
+
+[node name="Narration" type="RichTextLabel" parent="CanvasLayer" unique_id=521826208]
+offset_left = 339.0
+offset_top = 430.0
+offset_right = 834.0
+offset_bottom = 530.0
+
+[node name="ContinueText" type="Label" parent="CanvasLayer" unique_id=1281048194]
+offset_left = 553.0
+offset_top = 545.0
+offset_right = 812.0
+offset_bottom = 568.0
+text = "Pressione [ENTER] para continuar"
+
+[node name="NarratorVoice" type="AudioStreamPlayer" parent="CanvasLayer" unique_id=379338133]
+stream = ExtResource("3_aqydm")

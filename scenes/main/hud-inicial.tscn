@@ -4,47 +4,44 @@
 [ext_resource type="Texture2D" uid="uid://010l50xppvt6" path="res://assets/SoundOff.png" id="3_e8nwm"]
 [ext_resource type="Texture2D" uid="uid://cfjy07wahis7f" path="res://assets/Sound.png" id="4_kl5eg"]
 [ext_resource type="AudioStream" uid="uid://c8tv8wi511p1b" path="res://sounds/SoundPlay2.ogg" id="5_pybbn"]
+[ext_resource type="AudioStream" uid="uid://iekhi2gqyimy" path="res://sounds/49447089-game-start-317318.mp3" id="6_fqhrk"]
 [ext_resource type="Texture2D" uid="uid://dgxkv1b315s5p" path="res://assets/inicial-got.jpeg" id="7_n22f4"]
 
-[sub_resource type="InputEventKey" id="InputEventKey_ahhtf"]
-device = -1
-keycode = 4194309
-
-[sub_resource type="Shortcut" id="Shortcut_oo0fn"]
-events = [SubResource("InputEventKey_ahhtf")]
+[sub_resource type="Shortcut" id="Shortcut_fqhrk"]
 
 [node name="HUD" type="CanvasLayer" unique_id=1593445996]
 script = ExtResource("1_ja8xq")
 
-[node name="StartButton" type="Button" parent="." unique_id=817518267]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=55189226]
+offset_left = 3.0
+offset_top = -5.0
+offset_right = 1152.0
+offset_bottom = 661.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("7_n22f4")
+expand_mode = 1
+
+[node name="StartButton" type="Button" parent="TextureRect" unique_id=817518267]
+z_index = 100
+layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.31300002
 anchor_top = 0.758
 anchor_right = 0.623
 anchor_bottom = 1.0
-offset_left = 0.4239807
-offset_top = -0.184021
-offset_right = 0.30395508
-offset_bottom = 11.0
+offset_left = -150.63702
+offset_top = -519.828
+offset_right = 172.17297
+offset_bottom = -590.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 129
+theme_override_font_sizes/font_size = 50
 action_mode = 0
 button_mask = 5
-shortcut = SubResource("Shortcut_oo0fn")
-text = "START"
+shortcut = SubResource("Shortcut_fqhrk")
+text = "Pressione 'E'  ou 'R1' para jogar"
 flat = true
-
-[node name="TextureRect" type="TextureRect" parent="StartButton" unique_id=55189226]
-layout_mode = 0
-offset_left = -340.5
-offset_top = -480.0
-offset_right = 808.5
-offset_bottom = 186.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("7_n22f4")
-expand_mode = 1
 
 [node name="SoundOff" type="Button" parent="." unique_id=1815679513]
 visible = false
@@ -84,6 +81,7 @@ stream = ExtResource("5_pybbn")
 volume_db = 8.0
 
 [node name="Fade" type="ColorRect" parent="." unique_id=1502741412]
+visible = false
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
@@ -92,4 +90,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[node name="StartSFX" type="AudioStreamPlayer" parent="." unique_id=1366637696]
+stream = ExtResource("6_fqhrk")
+
+[connection signal="pressed" from="TextureRect/StartButton" to="." method="_on_start_button_pressed"]

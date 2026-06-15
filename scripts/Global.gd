@@ -1,6 +1,24 @@
 extends Node2D
 
 var arvore_consertada = false
+var guardian_in_era2 = false
+
+var lago_descongelado = false
+
+var temperatura = -40
+
+var raizes_ativas = false
+var ponte_estabilizada = false
+
+var cajado_equipado = false
+
+var fogueira_acesa = false
+
+var energia_temporal = 0.0
+
+var paineis_ativados = 0
+
+var cristal_ativo = false
 
 #BARRA INSTABILIDADE E SÍMBOLO ECO
 var instability = 100

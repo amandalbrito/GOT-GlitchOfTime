@@ -13,10 +13,18 @@ extends Node2D
 @onready var split_top = $CanvasLayer/WhiteSplitTop
 @onready var split_bottom = $CanvasLayer/WhiteSplitBottom
 
+@onready var animated_sprite = scientist
+
+@onready var scientist_dialog = $IntroLab/FutureWorld/CharacterBody2D/DialogBox
+@onready var scientist_label = $IntroLab/FutureWorld/CharacterBody2D/DialogBox/Label
+@onready var scientist_voice = $IntroLab/FutureWorld/CharacterBody2D/DialogBox/VoiceSound
+
+@onready var music = $IntroLab/Music
+@onready var earth_rumble = $IntroLab/EarthRumble
+@onready var explosion_sfx = $IntroLab/ExplosionSFX
 
 func _ready():
 
-	# ordem visual da UI
 	black_fade.z_index = 1
 	white_flash.z_index = 2
 
@@ -26,7 +34,8 @@ func _ready():
 
 	dialogue.z_index = 999
 
-	# estado inicial
+	scientist_dialog.visible = false
+
 	guardian_scene.visible = false
 
 	black_fade.visible = false
@@ -40,45 +49,51 @@ func _ready():
 
 	scientist.play("idle")
 
+	music.volume_db = -15
+	music.play()
+
 	start_intro()
 
 
 func start_intro() -> void:
 
-	# -------------------
-	# CIENTISTA FALANDO
-	# -------------------
+	await scientist_speak(
+		"Com isso...",
+		2.0
+	)
 
-	await speak("Com isso...", 2.0)
-
-	await speak(
+	await scientist_speak(
 		"O presente deve finalmente se estabilizar.",
 		3.0
 	)
 
-	await speak("Chega de guerras.", 2.0)
+	await scientist_speak(
+		"Chega de guerras.",
+		1.0
+	)
 
-	await speak("Chega de destruição.", 2.0)
+	await scientist_speak(
+		"Chega de destruição.",
+		1.0
+	)
 
-	await speak(
+	# muda para computing
+	animated_sprite.play("computing")
+
+	await scientist_speak(
 		"Só preciso ativar o terminal...",
-		2.5
+		2.0
 	)
 
 	# pausa dramática
 	dialogue.visible = false
 	await get_tree().create_timer(1.5).timeout
 
-	await speak("Vamos lá...", 1.2)
+	await scientist_speak("Vamos lá...", 1.)
 
 	dialogue.visible = false
 
-	# tempo dela mexendo no terminal
 	await get_tree().create_timer(2.0).timeout
-
-	# -------------------
-	# TERMINAL BUGA
-	# -------------------
 
 	await terminal_error()
 
@@ -102,8 +117,10 @@ func start_intro() -> void:
 	# -------------------
 
 	guardian_scene.visible = false
-
+	
+	
 	black_fade.visible = true
+	earth_rumble.stop()
 	black_fade.modulate.a = 1.0
 
 	await speak(
@@ -169,6 +186,13 @@ func speak(texto: String, tempo: float):
 
 func terminal_error():
 
+	# PARA A MÚSICA
+	music.stop()
+
+	# EXPLOSÃO
+	explosion_sfx.volume_db = -6
+	explosion_sfx.play()
+
 	white_flash.visible = true
 
 	for i in range(8):
@@ -201,6 +225,7 @@ func guardian_intro():
 	# anda até o centro
 	var tween = create_tween()
 
+
 	tween.tween_property(
 		guardian,
 		"position:x",
@@ -212,6 +237,9 @@ func guardian_intro():
 
 	# para no centro
 	guardian.play("default")
+	
+	earth_rumble.volume_db = -18
+	earth_rumble.play()
 
 	# suspense antes do caos
 	await get_tree().create_timer(0.8).timeout
@@ -230,7 +258,6 @@ func shake_guardian_scene():
 		await get_tree().create_timer(0.04).timeout
 
 	guardian_scene.position = Vector2.ZERO
-
 
 func white_split_effect():
 
@@ -274,6 +301,7 @@ func white_split_effect():
 
 	split_top.position.x = 120
 	split_bottom.position.x = 120
+	
 
 	# BUM abre rápido
 	var tween = create_tween()
@@ -321,3 +349,16 @@ func white_split_effect():
 
 	split_top.visible = false
 	split_bottom.visible = false
+
+func scientist_speak(
+	texto: String,
+	tempo: float
+):
+
+	await scientist_dialog.show_text(
+		texto
+	)
+
+	await get_tree().create_timer(
+		tempo
+	).timeout

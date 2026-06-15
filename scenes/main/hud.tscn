@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://cfjy07wahis7f" path="res://assets/Sound.png" id="4_5pdws"]
 [ext_resource type="AudioStream" uid="uid://c8tv8wi511p1b" path="res://sounds/SoundPlay2.ogg" id="5_uo2fv"]
 [ext_resource type="Texture2D" uid="uid://bg75lrdosx5h5" path="res://assets/ResetButton.png" id="6_047uy"]
+[ext_resource type="Script" uid="uid://dj22c3ydtge3x" path="res://scripts/slot_cajado.gd" id="7_cad0p"]
+[ext_resource type="Shader" uid="uid://8fua1caxfyhl" path="res://shaders/aura.gdshader" id="7_ggpbj"]
+[ext_resource type="Texture2D" uid="uid://r5qfdsdsx3k" path="res://scenes/fase 2/cajadoGuardiao.png" id="8_04ve5"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_ahhtf"]
 device = -1
@@ -46,14 +49,13 @@ func _process(delta: float) -> void:
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uo2fv"]
 bg_color = Color(0.8, 0.2, 0.2, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_047uy"]
-bg_color = Color(1, 0.6, 0.2, 1)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5pdws"]
 bg_color = Color(0.2, 0.6, 1, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hd3ao"]
-bg_color = Color(0.6, 0.2, 1, 1)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1r4wp"]
+shader = ExtResource("7_ggpbj")
+shader_parameter/aura_width = 6.0
+shader_parameter/aura_color = Color(0.85882354, 0.70980394, 0.08627451, 1)
 
 [node name="HUD" type="CanvasLayer" unique_id=1593445996]
 script = ExtResource("1_ahhtf")
@@ -97,10 +99,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -207.0
-offset_top = 16.0
-offset_right = 206.0
-offset_bottom = 68.0
+offset_left = -211.0
+offset_top = -310.0
+offset_right = 202.0
+offset_bottom = -258.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
@@ -124,6 +126,7 @@ text = "Instabilidade: 0%"
 script = SubResource("GDScript_ahhtf")
 
 [node name="SoundOff" type="Button" parent="." unique_id=841322734]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -165,10 +168,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 324.0
-offset_top = 16.0
-offset_right = 374.0
-offset_bottom = 66.0
+offset_left = 400.0
+offset_top = -312.0
+offset_right = 450.0
+offset_bottom = -262.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -180,10 +183,10 @@ autowrap_trim_flags = 192
 expand_icon = true
 
 [node name="PlayerPastUI" type="VBoxContainer" parent="." unique_id=1829675750]
-offset_left = 3.0
-offset_top = 424.0
-offset_right = 155.0
-offset_bottom = 501.0
+offset_left = 964.0
+offset_top = 503.0
+offset_right = 1116.0
+offset_bottom = 580.0
 alignment = 1
 metadata/_edit_group_ = true
 
@@ -193,14 +196,9 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 text = "Guardião"
 
-[node name="LifeBar" type="ProgressBar" parent="PlayerPastUI" unique_id=918325532]
+[node name="EnergyBar" type="ProgressBar" parent="PlayerPastUI" unique_id=918325532]
 layout_mode = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_uo2fv")
-value = 100.0
-
-[node name="EnergyBar" type="ProgressBar" parent="PlayerPastUI" unique_id=381635476]
-layout_mode = 2
-theme_override_styles/background = SubResource("StyleBoxFlat_047uy")
 value = 100.0
 
 [node name="PlayerFutureUI" type="VBoxContainer" parent="." unique_id=2145118115]
@@ -222,11 +220,6 @@ autowrap_trim_flags = 0
 [node name="EnergyBar" type="ProgressBar" parent="PlayerFutureUI" unique_id=1461404277]
 layout_mode = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_5pdws")
-value = 100.0
-
-[node name="StabilityBar" type="ProgressBar" parent="PlayerFutureUI" unique_id=1456464382]
-layout_mode = 2
-theme_override_styles/background = SubResource("StyleBoxFlat_hd3ao")
 value = 100.0
 
 [node name="PastInventory" type="VBoxContainer" parent="." unique_id=1322354031]
@@ -253,6 +246,7 @@ layout_mode = 2
 columns = 3
 
 [node name="ScoreUI" type="VBoxContainer" parent="." unique_id=458916480]
+visible = false
 anchors_preset = -1
 anchor_right = 0.017
 anchor_bottom = 0.093
@@ -273,6 +267,18 @@ text = "ESTABILIDADE: 0"
 [node name="ChaosLabel" type="Label" parent="ScoreUI" unique_id=2065906120]
 layout_mode = 2
 text = "CAOS: 0"
+
+[node name="SlotCajado" type="TextureButton" parent="." unique_id=1932778522]
+material = SubResource("ShaderMaterial_1r4wp")
+offset_left = 898.00006
+offset_top = 503.00006
+offset_right = 1922.0
+offset_bottom = 2039.0
+scale = Vector2(0.05, 0.05)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("8_04ve5")
+script = ExtResource("7_cad0p")
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="SoundOff" to="." method="_on_sound_off_pressed"]

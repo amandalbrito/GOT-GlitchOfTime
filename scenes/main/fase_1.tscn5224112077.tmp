@@ -1,0 +1,1288 @@
+[gd_scene format=3 uid="uid://c5c6pbquhsd72"]
+
+[ext_resource type="Texture2D" uid="uid://cwe6yvwory4g7" path="res://assets/fase1cientista1.png" id="1_6cv3o"]
+[ext_resource type="Script" uid="uid://d4g7an3gulax2" path="res://scripts/cientista.gd" id="1_58p7p"]
+[ext_resource type="Texture2D" uid="uid://dweq64vierob6" path="res://assets/chaocientistaf1.png" id="2_1w0si"]
+[ext_resource type="Texture2D" uid="uid://dn3kjtu2pandm" path="res://assets/fase1cientista2.png" id="2_6cv3o"]
+[ext_resource type="Texture2D" uid="uid://bghiqkk0e0bhj" path="res://assets/fase1cientista3.png" id="3_58p7p"]
+[ext_resource type="Texture2D" uid="uid://glecv4np06v2" path="res://assets/fase1guardiao2.png" id="4_4vdtl"]
+[ext_resource type="Texture2D" uid="uid://d3mb5p7jdpn03" path="res://assets/fase1cientista4.png" id="4_6cv3o"]
+[ext_resource type="Texture2D" uid="uid://er1a4jj650ir" path="res://assets/Idle-cientista-Sheet.png" id="6_6cv3o"]
+[ext_resource type="Texture2D" uid="uid://nwgwjfnm6tkd" path="res://assets/fase1cientista5.png" id="6_oi7td"]
+[ext_resource type="Script" uid="uid://dqs0t4hesaanl" path="res://scenes/main/fio_1.gd" id="6_t2bot"]
+[ext_resource type="Texture2D" uid="uid://cahetfyxi1ucf" path="res://assets/fase1guardiao.png" id="6_w2nk6"]
+[ext_resource type="Texture2D" uid="uid://b1x7atwdjutwi" path="res://assets/fase1cientistafarol.png" id="7_1w0si"]
+[ext_resource type="Texture2D" uid="uid://c62rywxakaflm" path="res://assets/walk cientista sheet.png" id="7_58p7p"]
+[ext_resource type="Texture2D" uid="uid://br3vnicjwuy36" path="res://assets/terminalasset.png" id="8_73lc0"]
+[ext_resource type="Script" uid="uid://dmxy5cuds0h7o" path="res://scenes/main/fio_2.gd" id="8_275q8"]
+[ext_resource type="Script" uid="uid://buxttyogskx27" path="res://scenes/main/entrada_farol_cientista.gd" id="8_iefw1"]
+[ext_resource type="Script" uid="uid://c7f2i4f8ox3en" path="res://scenes/main/terminal.gd" id="8_jklki"]
+[ext_resource type="Texture2D" uid="uid://dmqgf5b7c0q0o" path="res://assets/terminalbrokenasset.png" id="9_esxdw"]
+[ext_resource type="Script" uid="uid://c3hllugqcnyps" path="res://scenes/main/fio_3.gd" id="9_qujc4"]
+[ext_resource type="Texture2D" uid="uid://bkxquox0vqiw6" path="res://assets/farolfuturo.png" id="11_a767h"]
+[ext_resource type="PackedScene" uid="uid://cewwmfundrrn1" path="res://scenes/fase1/pin_code.tscn" id="11_jklki"]
+[ext_resource type="Script" uid="uid://ddayit13ndy0v" path="res://scripts/guardiao.gd" id="11_s6lh8"]
+[ext_resource type="Texture2D" uid="uid://nj34iln3dt43" path="res://assets/IdleGuardião.png" id="12_euvu5"]
+[ext_resource type="Texture2D" uid="uid://bqpk4do25mmb3" path="res://assets/fase1guardiao4.png" id="12_s6lh8"]
+[ext_resource type="Texture2D" uid="uid://dat1wqdka570t" path="res://assets/walk guardião.png" id="13_5rai6"]
+[ext_resource type="Script" uid="uid://c3h3kpbni2mj7" path="res://scenes/main/drone.gd" id="15_6bfcf"]
+[ext_resource type="Texture2D" uid="uid://oofyyxruffbg" path="res://assets/drone.png" id="15_mbugg"]
+[ext_resource type="Texture2D" uid="uid://yocfqvmmn7rq" path="res://assets/droneliberto.png" id="16_3wqp4"]
+[ext_resource type="Texture2D" uid="uid://d1dxdasnoosn5" path="res://assets/lightdrone.png" id="18_4jiyx"]
+[ext_resource type="Texture2D" uid="uid://t2iaukqo580q" path="res://assets/temp1.png" id="19_0h7mv"]
+[ext_resource type="Texture2D" uid="uid://dttgh3oga0frp" path="res://assets/temp2.png" id="20_s6lh8"]
+[ext_resource type="Texture2D" uid="uid://dw2si0py0ejhu" path="res://assets/temp3.png" id="21_du2dg"]
+[ext_resource type="Texture2D" uid="uid://bd7fm0lvg5kua" path="res://assets/temp5.png" id="22_0im1l"]
+[ext_resource type="Script" uid="uid://cfpamftq2ahx4" path="res://scenes/main/area_2d_2.gd" id="23_glijj"]
+[ext_resource type="Script" uid="uid://bf3jvdc5r325t" path="res://scenes/main/animated_sprite_2d.gd" id="23_s6lh8"]
+[ext_resource type="Texture2D" uid="uid://2538075de1r3" path="res://assets/fase1guardiao62.png" id="24_bo4q5"]
+[ext_resource type="Texture2D" uid="uid://bcxv0yxiavu6g" path="res://assets/fase1guardiao6.png" id="25_bo4q5"]
+[ext_resource type="Texture2D" uid="uid://bn7xnfj7jqwyi" path="res://assets/farolguardiao.png" id="33_000yc"]
+[ext_resource type="Script" uid="uid://dpsceal5m421u" path="res://scenes/main/entrada_farol_guardiao.gd" id="34_y23qa"]
+[ext_resource type="Texture2D" uid="uid://cc5avowpa4qc4" path="res://assets/Old man walk-Sheet.png" id="36_5xpra"]
+[ext_resource type="Script" uid="uid://c20qgk2hc7cab" path="res://scenes/main/tribo.gd" id="36_316wq"]
+[ext_resource type="Script" uid="uid://chemq3vvgs4j0" path="res://scenes/main/npc_1.gd" id="38_y23qa"]
+[ext_resource type="Script" uid="uid://cjtsptf87emt6" path="res://scenes/main/npc_2.gd" id="39_a767h"]
+[ext_resource type="Script" uid="uid://cluw08yu4udf8" path="res://scenes/main/npc_3.gd" id="39_iefw1"]
+[ext_resource type="Texture2D" uid="uid://c30scc3b06xna" path="res://assets/background 2.png" id="42_l8fim"]
+[ext_resource type="Script" uid="uid://dpp2waqjtbej6" path="res://scenes/main/scientist_puzzle.gd" id="46_ijl2r"]
+[ext_resource type="Texture2D" uid="uid://d3awhwncbbel0" path="res://assets/bolaazul.png" id="47_xfyrl"]
+[ext_resource type="Texture2D" uid="uid://cd8lj6sqiy766" path="res://assets/bolavermelha.png" id="48_v0wqp"]
+[ext_resource type="Texture2D" uid="uid://dg0wvrqgd2q6" path="res://assets/bolaamarela.png" id="49_3npk5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_euvu5"]
+atlas = ExtResource("6_6cv3o")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rai6"]
+atlas = ExtResource("6_6cv3o")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73lc0"]
+atlas = ExtResource("6_6cv3o")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_esxdw"]
+atlas = ExtResource("6_6cv3o")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jklki"]
+atlas = ExtResource("6_6cv3o")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apdo5"]
+atlas = ExtResource("6_6cv3o")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhy4a"]
+atlas = ExtResource("6_6cv3o")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_es3ik"]
+atlas = ExtResource("6_6cv3o")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0h7mv"]
+atlas = ExtResource("6_6cv3o")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6lh8"]
+atlas = ExtResource("6_6cv3o")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_du2dg"]
+atlas = ExtResource("7_58p7p")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0im1l"]
+atlas = ExtResource("7_58p7p")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glijj"]
+atlas = ExtResource("7_58p7p")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bo4q5"]
+atlas = ExtResource("7_58p7p")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oqf5w"]
+atlas = ExtResource("7_58p7p")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oi7td"]
+atlas = ExtResource("7_58p7p")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1w0si"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_euvu5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rai6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73lc0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_esxdw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jklki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apdo5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhy4a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_es3ik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0h7mv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6lh8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_du2dg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0im1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glijj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bo4q5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oqf5w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oi7td")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 20.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_glijj"]
+radius = 159.99997
+height = 534.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oi7td"]
+size = Vector2(558, 640)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nkq0o"]
+size = Vector2(2967.9998, 118.00006)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l8fim"]
+radius = 59.61499
+height = 324.36
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t2bot"]
+radius = 60.0
+height = 340.36
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_275q8"]
+radius = 54.244995
+height = 336.36
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_mbugg"]
+a = Vector2(662.90234, -168.0741)
+b = Vector2(376.43408, 3.144287)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_000yc"]
+size = Vector2(1414, 122)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_73lc0"]
+size = Vector2(308, 208)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y23qa"]
+size = Vector2(200.57272, 209.7652)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xpra"]
+size = Vector2(414, 578)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3wqp4"]
+size = Vector2(1603.375, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1w0si"]
+atlas = ExtResource("12_euvu5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbugg"]
+atlas = ExtResource("12_euvu5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wqp4"]
+atlas = ExtResource("12_euvu5")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_000yc"]
+atlas = ExtResource("12_euvu5")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6bfcf"]
+atlas = ExtResource("12_euvu5")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jiyx"]
+atlas = ExtResource("12_euvu5")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xpra"]
+atlas = ExtResource("12_euvu5")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_316wq"]
+atlas = ExtResource("12_euvu5")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scxwr"]
+atlas = ExtResource("12_euvu5")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iefw1"]
+atlas = ExtResource("12_euvu5")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y23qa"]
+atlas = ExtResource("13_5rai6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a767h"]
+atlas = ExtResource("13_5rai6")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8fim"]
+atlas = ExtResource("13_5rai6")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2bot"]
+atlas = ExtResource("13_5rai6")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_275q8"]
+atlas = ExtResource("13_5rai6")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qujc4"]
+atlas = ExtResource("13_5rai6")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ijl2r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1w0si")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbugg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wqp4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_000yc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6bfcf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jiyx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xpra")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_316wq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scxwr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iefw1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y23qa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a767h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l8fim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2bot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_275q8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qujc4")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_000yc"]
+radius = 166.66663
+height = 556.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6bfcf"]
+size = Vector2(570, 626)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_glijj"]
+animations = [{
+"frames": [{
+"duration": 1.5,
+"texture": ExtResource("19_0h7mv")
+}, {
+"duration": 1.5,
+"texture": ExtResource("20_s6lh8")
+}, {
+"duration": 1.5,
+"texture": ExtResource("21_du2dg")
+}, {
+"duration": 1.5,
+"texture": ExtResource("22_0im1l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 11.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_000yc"]
+radius = 271.8388
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oqf5w"]
+size = Vector2(351.94397, 458.1129)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_316wq"]
+size = Vector2(404.1078, 319.47452)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a767h"]
+size = Vector2(86.388916, 101.20201)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4jiyx"]
+size = Vector2(704.1067, 591.22784)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijl2r"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfyrl"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(32, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_decj7"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(96, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0wqp"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(64, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3npk5"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1o4e"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wa31v"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6po84"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxref"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwyme"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(160, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3npk5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ijl2r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfyrl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_decj7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0wqp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3npk5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1o4e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wa31v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6po84")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kxref")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwyme")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6oqmo"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(64, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8maqu"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(32, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpdf7"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0xpu"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(96, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5tq4"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xh4ry"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yet47"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6m47"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lkw7"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vpr3"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(160, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j1o4e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6oqmo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8maqu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpdf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0xpu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5tq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xh4ry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yet47")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w6m47")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lkw7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vpr3")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsxgt"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(96, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pw6aw"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(64, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wod1f"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(32, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fagl"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fnmi"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fc5xk"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wl3h3"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8md6f"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30i2s"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pefx6"]
+atlas = ExtResource("36_5xpra")
+region = Rect2(160, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wa31v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsxgt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pw6aw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wod1f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fagl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fnmi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fc5xk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wl3h3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8md6f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30i2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pefx6")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_scxwr"]
+size = Vector2(33.112244, 61.063557)
+
+[node name="Fase1" type="Node2D" unique_id=2100306129]
+
+[node name="PuzzleCanvas" type="CanvasLayer" parent="." unique_id=1896364635]
+layer = 50
+
+[node name="DarkOverlay" type="ColorRect" parent="PuzzleCanvas" unique_id=163393963]
+visible = false
+offset_right = 1152.0
+offset_bottom = 378.0
+color = Color(0, 0, 0, 0.47058824)
+
+[node name="Control" type="Control" parent="PuzzleCanvas" unique_id=1601614562]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="WireMiniGame" parent="PuzzleCanvas/Control" unique_id=1549836399 instance=ExtResource("11_jklki")]
+top_level = true
+z_index = 999
+scale = Vector2(1.1, 1.1)
+
+[node name="Control" type="Control" parent="." unique_id=1765965462]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1149.0
+offset_bottom = 647.0
+
+[node name="UpView" type="SubViewportContainer" parent="Control" unique_id=1641064710]
+layout_mode = 0
+offset_right = 3006.0
+offset_bottom = 423.0
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Control/UpView" unique_id=1122599829]
+handle_input_locally = false
+size = Vector2i(3006, 423)
+size_2d_override = Vector2i(1152, 324)
+render_target_update_mode = 4
+
+[node name="FutureWorld" type="Node2D" parent="Control/UpView/SubViewport" unique_id=1430732584]
+position = Vector2(15, 91)
+scale = Vector2(0.5, 0.5)
+
+[node name="GroundFuture" type="Sprite2D" parent="Control/UpView/SubViewport/FutureWorld" unique_id=687358922]
+position = Vector2(5050.75, 452.5)
+scale = Vector2(1.0987186, 1.34)
+texture = ExtResource("2_1w0si")
+
+[node name="Cientista" type="CharacterBody2D" parent="Control/UpView/SubViewport/FutureWorld" unique_id=1580750846]
+z_index = 999
+position = Vector2(110, 308)
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_58p7p")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/UpView/SubViewport/FutureWorld/Cientista" unique_id=728737510]
+texture_filter = 1
+position = Vector2(43.33338, -49.999855)
+scale = Vector2(19.791668, 18.125002)
+sprite_frames = SubResource("SpriteFrames_1w0si")
+animation = &"walking"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/UpView/SubViewport/FutureWorld/Cientista" unique_id=1084114450]
+position = Vector2(0, -2)
+shape = SubResource("CapsuleShape2D_glijj")
+
+[node name="CameraFuture" type="Camera2D" parent="Control/UpView/SubViewport/FutureWorld/Cientista" unique_id=290278843]
+show_behind_parent = true
+position = Vector2(0, 40)
+scale = Vector2(0.15, 0.15)
+limit_left = 0
+limit_right = 3000
+limit_bottom = 322
+position_smoothing_enabled = true
+position_smoothing_speed = 4.0
+drag_left_margin = 0.3
+drag_top_margin = 0.3
+editor_draw_screen = false
+
+[node name="Label" type="Label" parent="Control/UpView/SubViewport/FutureWorld/Cientista" unique_id=810019603]
+offset_right = 40.0
+offset_bottom = 23.0
+justification_flags = 171
+
+[node name="Area2D" type="Area2D" parent="Control/UpView/SubViewport/FutureWorld" unique_id=1895184973]
+position = Vector2(758, 566)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Control/UpView/SubViewport/FutureWorld" unique_id=544666709]
+position = Vector2(-236, 188)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/UpView/SubViewport/FutureWorld/StaticBody2D2" unique_id=1158574941]
+position = Vector2(110, -38)
+shape = SubResource("RectangleShape2D_oi7td")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Control/UpView/SubViewport/FutureWorld" unique_id=741116393]
+position = Vector2(2434, 171)
+
+[node name="ColisionFim" type="StaticBody2D" parent="Control/UpView/SubViewport/FutureWorld" unique_id=549720300]
+position = Vector2(6000, 188)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/UpView/SubViewport/FutureWorld/ColisionFim" unique_id=324795384]
+position = Vector2(-49, -38)
+shape = SubResource("RectangleShape2D_oi7td")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control/UpView/SubViewport/FutureWorld" unique_id=1519295577]
+position = Vector2(290, 306)
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/UpView/SubViewport/FutureWorld/StaticBody2D" unique_id=1161754754]
+position = Vector2(3746.667, 663.3334)
+scale = Vector2(3.3333333, 3.3333333)
+shape = SubResource("RectangleShape2D_nkq0o")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Control/UpView/SubViewport/FutureWorld/StaticBody2D" unique_id=1620061997]
+position = Vector2(8361.666, 636.6669)
+scale = Vector2(3.3333333, 3.3333333)
+shape = SubResource("RectangleShape2D_nkq0o")
+
+[node name="Era2" type="Node2D" parent="Control/UpView/SubViewport/FutureWorld" unique_id=1028917532]
+
+[node name="Fio1" type="Area2D" parent="Control/UpView/SubViewport/FutureWorld/Era2" unique_id=492548087]
+position = Vector2(866.385, 183.82)
+script = ExtResource("6_t2bot")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/UpView/SubViewport/FutureWorld/Era2/Fio1" unique_id=370061863]
+z_index = 1900
+shape = SubResource("CapsuleShape2D_l8fim")
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/UpView/SubViewport/FutureWorld/Era2" unique_id=1441921328]
+z_index = 10
+position = Vector2(800, 110)
+texture = ExtResource("11_a767h")
+
+[node name="Fio2" type="Area2D" parent="Control/UpView/SubViewport/FutureWorld/Era2" unique_id=1163047917]
+position = Vector2(1050, 183.82)
+script = ExtResource("8_275q8")
+terminal_id = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/UpView/SubViewport/FutureWorld/Era2/Fio2" unique_id=1248941604]
+z_index = 10
+shape = SubResource("CapsuleShape2D_t2bot")
+
+[node name="Fio3" type="Area2D" parent="Control/UpView/SubViewport/FutureWorld/Era2" unique_id=1127646339]
+z_index = 10
+position = Vector2(1223.755, 183.82)
+script = ExtResource("9_qujc4")
+terminal_id = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/UpView/SubViewport/FutureWorld/Era2/Fio3" unique_id=1614588849]
+shape = SubResource("CapsuleShape2D_275q8")
+
+[node name="Era1" type="Node2D" parent="Control/UpView/SubViewport/FutureWorld" unique_id=1949950112]
+
+[node name="BackgroundFuture" type="Sprite2D" parent="Control/UpView/SubViewport/FutureWorld/Era1" unique_id=366854214]
+position = Vector2(787.24994, 64.999954)
+scale = Vector2(1.0544554, 1.080786)
+texture = ExtResource("1_6cv3o")
+
+[node name="BackgroundFuture2" type="Sprite2D" parent="Control/UpView/SubViewport/FutureWorld/Era1" unique_id=708947159]
+position = Vector2(2240, 86)
+scale = Vector2(1.0579499, 1.037118)
+texture = ExtResource("2_6cv3o")
+
+[node name="BackgroundFuture3" type="Sprite2D" parent="Control/UpView/SubViewport/FutureWorld/Era1" unique_id=1794666008]
+position = Vector2(3248.0005, 113)
+scale = Vector2(1.0579499, 0.9530916)
+texture = ExtResource("3_58p7p")
+
+[node name="BackgroundFuture4" type="Sprite2D" parent="Control/UpView/SubViewport/FutureWorld/Era1" unique_id=234591658]
+position = Vector2(3966, 113)
+scale = Vector2(1.0579499, 0.9530916)
+texture = ExtResource("4_6cv3o")
+
+[node name="BackgroundFuture5" type="Sprite2D" parent="Control/UpView/SubViewport/FutureWorld/Era1" unique_id=698482647]
+position = Vector2(5550.5, 125)
+scale = Vector2(0.9994139, 0.7527115)
+texture = ExtResource("6_oi7td")
+
+[node name="Spawn" type="Marker2D" parent="Control/UpView/SubViewport/FutureWorld/Era1" unique_id=1035383225]
+position = Vector2(124, 324)
+
+[node name="Rampa" type="StaticBody2D" parent="Control/UpView/SubViewport/FutureWorld/Era1" unique_id=392367895]
+position = Vector2(5000, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/UpView/SubViewport/FutureWorld/Era1/Rampa" unique_id=1738135017]
+z_index = 100
+shape = SubResource("SegmentShape2D_mbugg")
+
+[node name="ChaoFarol" type="StaticBody2D" parent="Control/UpView/SubViewport/FutureWorld/Era1" unique_id=899057965]
+position = Vector2(5000, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/UpView/SubViewport/FutureWorld/Era1/ChaoFarol" unique_id=1125742843]
+z_index = 10
+position = Vector2(-151, 3)
+shape = SubResource("RectangleShape2D_000yc")
+
+[node name="Terminal" type="Node2D" parent="Control/UpView/SubViewport/FutureWorld/Era1" unique_id=813515781]
+position = Vector2(2100, 322)
+script = ExtResource("8_jklki")
+
+[node name="TerminalFixed" type="Sprite2D" parent="Control/UpView/SubViewport/FutureWorld/Era1/Terminal" unique_id=467063852]
+visible = false
+position = Vector2(-4, -84)
+scale = Vector2(0.34615397, 0.35245895)
+texture = ExtResource("8_73lc0")
+
+[node name="TerminalEstragado" type="Sprite2D" parent="Control/UpView/SubViewport/FutureWorld/Era1/Terminal" unique_id=207876340]
+position = Vector2(18, -88)
+scale = Vector2(0.33215272, 0.34912294)
+texture = ExtResource("9_esxdw")
+
+[node name="Area2D" type="Area2D" parent="Control/UpView/SubViewport/FutureWorld/Era1/Terminal" unique_id=426115027]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/UpView/SubViewport/FutureWorld/Era1/Terminal/Area2D" unique_id=469964427]
+position = Vector2(6, -22)
+shape = SubResource("RectangleShape2D_73lc0")
+
+[node name="Label" type="Label" parent="Control/UpView/SubViewport/FutureWorld/Era1/Terminal" unique_id=172700333]
+offset_left = -78.0
+offset_top = -200.0
+offset_right = 93.0
+offset_bottom = -177.0
+text = "[E] Consertar terminal"
+
+[node name="EntradaFarolCientista" type="Area2D" parent="Control/UpView/SubViewport/FutureWorld/Era1" unique_id=584932030 node_paths=PackedStringArray("player", "spawn_position")]
+position = Vector2(5777, -200)
+scale = Vector2(0.9971468, 1.2299465)
+script = ExtResource("8_iefw1")
+player = NodePath("../../Cientista")
+spawn_position = NodePath("../Spawn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/UpView/SubViewport/FutureWorld/Era1/EntradaFarolCientista" unique_id=2100702220]
+position = Vector2(-137.39209, 410.58694)
+shape = SubResource("RectangleShape2D_y23qa")
+
+[node name="FarolFuture" type="Sprite2D" parent="Control/UpView/SubViewport/FutureWorld/Era1/EntradaFarolCientista" unique_id=1288276647]
+z_index = 10
+texture = ExtResource("7_1w0si")
+
+[node name="Drone" type="Node2D" parent="Control/UpView/SubViewport/FutureWorld/Era1" unique_id=1435350121 node_paths=PackedStringArray("tribe")]
+position = Vector2(4727, 104.5)
+script = ExtResource("15_6bfcf")
+tribe = NodePath("../../../../../DownView/SubViewportDown/PastWorld/Era2/Tribo")
+
+[node name="Area2D" type="Area2D" parent="Control/UpView/SubViewport/FutureWorld/Era1/Drone" unique_id=751502808]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/UpView/SubViewport/FutureWorld/Era1/Drone/Area2D" unique_id=1985274770]
+position = Vector2(26, 34.5)
+shape = SubResource("RectangleShape2D_5xpra")
+
+[node name="DronePreso" type="Sprite2D" parent="Control/UpView/SubViewport/FutureWorld/Era1/Drone" unique_id=575028584]
+position = Vector2(2, 0)
+scale = Vector2(0.4937612, 0.5228245)
+texture = ExtResource("15_mbugg")
+
+[node name="DroneLiberto" type="Sprite2D" parent="Control/UpView/SubViewport/FutureWorld/Era1/Drone" unique_id=620940289]
+visible = false
+position = Vector2(5.9998646, -2.8226109)
+scale = Vector2(0.50313306, 0.50238264)
+texture = ExtResource("16_3wqp4")
+
+[node name="Label" type="Label" parent="Control/UpView/SubViewport/FutureWorld/Era1/Drone" unique_id=1153590530]
+offset_right = 153.0
+offset_bottom = 37.5
+text = "[E] Consertar Drone"
+
+[node name="DroneLight" type="PointLight2D" parent="Control/UpView/SubViewport/FutureWorld/Era1/Drone" unique_id=1627406394]
+position = Vector2(156, 44)
+color = Color(0.74522537, 2.8397144e-06, 7.70092e-07, 1)
+energy = 10.0
+texture = ExtResource("18_4jiyx")
+texture_scale = 2.68
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control/UpView" unique_id=2003816624]
+
+[node name="FadeRect" type="ColorRect" parent="Control/UpView/CanvasLayer" unique_id=1152645276]
+modulate = Color(0, 0, 0, 1)
+z_index = 999
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = 1.0
+offset_right = 1859.0
+offset_bottom = -286.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="DownView" type="SubViewportContainer" parent="Control" unique_id=770732633]
+layout_direction = 2
+layout_mode = 0
+offset_top = 368.0
+offset_right = 3006.0
+offset_bottom = 1215.0
+rotation = -0.0027306292
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewportDown" type="SubViewport" parent="Control/DownView" unique_id=460537394]
+handle_input_locally = false
+size = Vector2i(3006, 847)
+size_2d_override = Vector2i(1152, 324)
+render_target_update_mode = 4
+
+[node name="PastWorld" type="Node2D" parent="Control/DownView/SubViewportDown" unique_id=1486916528]
+position = Vector2(2, -37)
+scale = Vector2(0.5, 0.5)
+
+[node name="Era1" type="Node2D" parent="Control/DownView/SubViewportDown/PastWorld" unique_id=112979502]
+
+[node name="BackgroundPast3" type="Sprite2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1" unique_id=1632991412]
+position = Vector2(4477.921, 262.97784)
+scale = Vector2(1.023602, 1.4388889)
+texture = ExtResource("12_s6lh8")
+
+[node name="BackgroundPast2" type="Sprite2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1" unique_id=1539748638]
+position = Vector2(2651.0276, 186.00002)
+scale = Vector2(1.2423462, 1.3254157)
+texture = ExtResource("4_4vdtl")
+
+[node name="BackgroundPast" type="Sprite2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1" unique_id=1903181136]
+position = Vector2(828.05505, 186.17755)
+scale = Vector2(1.1094466, 1.0738719)
+texture = ExtResource("6_w2nk6")
+
+[node name="ChaoPassado" type="StaticBody2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1" unique_id=362795273]
+position = Vector2(600, 601)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1/ChaoPassado" unique_id=1384526636]
+position = Vector2(209, 3.6875)
+shape = SubResource("RectangleShape2D_3wqp4")
+
+[node name="Guardiao" type="CharacterBody2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1" unique_id=1949793100]
+z_index = 1000
+position = Vector2(126.000015, 472)
+scale = Vector2(0.3, 0.3)
+script = ExtResource("11_s6lh8")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1/Guardiao" unique_id=1412165199]
+texture_filter = 1
+scale = Vector2(19.583332, 16.770832)
+sprite_frames = SubResource("SpriteFrames_ijl2r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1/Guardiao" unique_id=1865128801]
+shape = SubResource("CapsuleShape2D_000yc")
+
+[node name="CameraPast" type="Camera2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1/Guardiao" unique_id=1253093444]
+show_behind_parent = true
+position = Vector2(0, 335.41663)
+scale = Vector2(2.9375, 2.515625)
+limit_left = -3
+limit_top = -178
+limit_right = 3000
+limit_bottom = 366
+position_smoothing_enabled = true
+position_smoothing_speed = 4.0
+drag_left_margin = 0.3
+drag_top_margin = 0.3
+
+[node name="Area2D" type="Area2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1" unique_id=342560894]
+position = Vector2(1729, -11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1/Area2D" unique_id=1742006523]
+visible = false
+position = Vector2(275, 259)
+shape = SubResource("RectangleShape2D_6bfcf")
+
+[node name="ColisaoInicio" type="StaticBody2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1" unique_id=41054184]
+position = Vector2(-236, 188)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1/ColisaoInicio" unique_id=98567302]
+position = Vector2(110, -38)
+shape = SubResource("RectangleShape2D_oi7td")
+
+[node name="ColisaoFim" type="StaticBody2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1" unique_id=1680618799]
+position = Vector2(5612, 354)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1/ColisaoFim" unique_id=1736044434]
+position = Vector2(110, -38)
+shape = SubResource("RectangleShape2D_oi7td")
+
+[node name="ChaoPassado2" type="StaticBody2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1" unique_id=1866838138]
+position = Vector2(600, 601)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1/ChaoPassado2" unique_id=1729627918]
+position = Vector2(1698, 7)
+shape = SubResource("RectangleShape2D_3wqp4")
+
+[node name="Storm" type="AnimatedSprite2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1" unique_id=650962987]
+position = Vector2(1548.1948, 260.73254)
+scale = Vector2(0.8955542, 0.8595756)
+sprite_frames = SubResource("SpriteFrames_glijj")
+frame_progress = 0.8437402
+script = ExtResource("23_s6lh8")
+
+[node name="PushArea" type="Area2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1/Storm" unique_id=412739152]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1/Storm/PushArea" unique_id=187736609]
+shape = SubResource("CircleShape2D_000yc")
+
+[node name="ChaoPassado3" type="StaticBody2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1" unique_id=203506931]
+position = Vector2(2216.539, 612.0654)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1/ChaoPassado3" unique_id=1499338746]
+position = Vector2(2500, 7)
+shape = SubResource("RectangleShape2D_3wqp4")
+
+[node name="ChaoPassado4" type="StaticBody2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1" unique_id=1205696168]
+position = Vector2(2216.539, 612.0654)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1/ChaoPassado4" unique_id=1998603273]
+position = Vector2(1698, 7)
+shape = SubResource("RectangleShape2D_3wqp4")
+
+[node name="Saida" type="Area2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1" unique_id=626519378 node_paths=PackedStringArray("player", "spawn_position")]
+position = Vector2(5055.2, 373.81595)
+script = ExtResource("23_glijj")
+player = NodePath("../Guardiao")
+spawn_position = NodePath("../../Era2/SpawnEra2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1/Saida" unique_id=631860647]
+position = Vector2(14.759766, -59.384857)
+shape = SubResource("RectangleShape2D_oqf5w")
+
+[node name="Node2D" type="Node2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1" unique_id=1562356764]
+position = Vector2(1546, 0)
+
+[node name="CollisionStorm" type="StaticBody2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1/Node2D" unique_id=445542150]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/DownView/SubViewportDown/PastWorld/Era1/Node2D/CollisionStorm" unique_id=1070940496]
+position = Vector2(16.010742, -68.01277)
+shape = SubResource("RectangleShape2D_316wq")
+
+[node name="Era2" type="Node2D" parent="Control/DownView/SubViewportDown/PastWorld" unique_id=2097163730]
+visible = false
+
+[node name="BackgroundPast7" type="Sprite2D" parent="Control/DownView/SubViewportDown/PastWorld/Era2" unique_id=999344515]
+z_index = 90
+position = Vector2(3319.814, 300)
+scale = Vector2(1.2562772, 1.1221417)
+texture = ExtResource("24_bo4q5")
+
+[node name="BackgroundPast6" type="Sprite2D" parent="Control/DownView/SubViewportDown/PastWorld/Era2" unique_id=1606410305]
+position = Vector2(1104.093, 300)
+scale = Vector2(1.2905079, 1.1624441)
+texture = ExtResource("25_bo4q5")
+
+[node name="SpawnEra2" type="Marker2D" parent="Control/DownView/SubViewportDown/PastWorld/Era2" unique_id=702270402]
+position = Vector2(227.85834, 858.6361)
+
+[node name="EntradaFarolGuardiao" type="Area2D" parent="Control/DownView/SubViewportDown/PastWorld/Era2" unique_id=1421836880 node_paths=PackedStringArray("player", "spawn_position")]
+position = Vector2(4327.4326, -157.04161)
+scale = Vector2(1.5217566, 1.5426095)
+script = ExtResource("34_y23qa")
+player = NodePath("../../Era1/Guardiao")
+spawn_position = NodePath("../SpawnEra2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/DownView/SubViewportDown/PastWorld/Era2/EntradaFarolGuardiao" unique_id=309382512]
+position = Vector2(-33.194336, 343.98297)
+scale = Vector2(0.99999976, 0.9999998)
+shape = SubResource("RectangleShape2D_a767h")
+
+[node name="FarolPast" type="Sprite2D" parent="Control/DownView/SubViewportDown/PastWorld/Era2/EntradaFarolGuardiao" unique_id=1780045538]
+z_index = 90
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("33_000yc")
+
+[node name="BackgroundPast8" type="Sprite2D" parent="Control/DownView/SubViewportDown/PastWorld/Era2" unique_id=1405002805]
+position = Vector2(5540, 290)
+scale = Vector2(1.2905079, 1.1624441)
+texture = ExtResource("25_bo4q5")
+
+[node name="Rampa" type="StaticBody2D" parent="Control/DownView/SubViewportDown/PastWorld/Era2" unique_id=928526740]
+position = Vector2(3700, 650)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/DownView/SubViewportDown/PastWorld/Era2/Rampa" unique_id=1814454126]
+z_index = 100
+shape = SubResource("SegmentShape2D_mbugg")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control/DownView/SubViewportDown/PastWorld/Era2" unique_id=1199646242]
+position = Vector2(4800, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/DownView/SubViewportDown/PastWorld/Era2/StaticBody2D" unique_id=59844988]
+position = Vector2(-116.72705, -135.03873)
+shape = SubResource("RectangleShape2D_4jiyx")
+
+[node name="Tribo" type="Node2D" parent="Control/DownView/SubViewportDown/PastWorld/Era2" unique_id=975414594]
+position = Vector2(1700, 464)
+script = ExtResource("36_316wq")
+
+[node name="NPC1" type="AnimatedSprite2D" parent="Control/DownView/SubViewportDown/PastWorld/Era2/Tribo" unique_id=809078377]
+texture_filter = 1
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_3npk5")
+animation = &"walking"
+frame_progress = 0.31399542
+script = ExtResource("38_y23qa")
+
+[node name="NPC2" type="AnimatedSprite2D" parent="Control/DownView/SubViewportDown/PastWorld/Era2/Tribo" unique_id=2043602694]
+texture_filter = 1
+position = Vector2(-80, 20)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_j1o4e")
+animation = &"walking"
+script = ExtResource("39_a767h")
+
+[node name="NPC3" type="AnimatedSprite2D" parent="Control/DownView/SubViewportDown/PastWorld/Era2/Tribo" unique_id=88704614]
+texture_filter = 1
+position = Vector2(80, 20)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_wa31v")
+animation = &"walking"
+script = ExtResource("39_iefw1")
+
+[node name="CollisionTribo" type="StaticBody2D" parent="Control/DownView/SubViewportDown/PastWorld/Era2/Tribo" unique_id=515339930]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/DownView/SubViewportDown/PastWorld/Era2/Tribo/CollisionTribo" unique_id=341160887]
+position = Vector2(5.519287, -174.5227)
+scale = Vector2(9, 9)
+shape = SubResource("RectangleShape2D_scxwr")
+
+[node name="Era3" type="Node2D" parent="Control/DownView/SubViewportDown/PastWorld" unique_id=1473734130]
+position = Vector2(-2.3841858e-07, -6.1035156e-05)
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/DownView/SubViewportDown/PastWorld/Era3" unique_id=1722149838]
+position = Vector2(736, 289.51196)
+scale = Vector2(2.5630345, 2.7871094)
+texture = ExtResource("42_l8fim")
+
+[node name="Runa1" type="Area2D" parent="Control/DownView/SubViewportDown/PastWorld/Era3" unique_id=2033403109]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/DownView/SubViewportDown/PastWorld/Era3/Runa1" unique_id=1151808646]
+
+[node name="Runa2" type="Area2D" parent="Control/DownView/SubViewportDown/PastWorld/Era3" unique_id=525674208]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/DownView/SubViewportDown/PastWorld/Era3/Runa2" unique_id=463363333]
+
+[node name="Runa3" type="Area2D" parent="Control/DownView/SubViewportDown/PastWorld/Era3" unique_id=103374504]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/DownView/SubViewportDown/PastWorld/Era3/Runa3" unique_id=483517367]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control/DownView" unique_id=12768415]
+
+[node name="FadeRect" type="ColorRect" parent="Control/DownView/CanvasLayer" unique_id=1927908723]
+modulate = Color(0, 0, 0, 1)
+z_index = 999
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = 354.0
+offset_right = 1218.0
+offset_bottom = 308.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="RuneCanvas" type="CanvasLayer" parent="." unique_id=1882782905]
+
+[node name="RunePuzzle" type="Node2D" parent="RuneCanvas" unique_id=655128425]
+
+[node name="ScientistPuzzle" type="Node2D" parent="RuneCanvas" unique_id=1026511025]
+script = ExtResource("46_ijl2r")
+
+[node name="PuzzleWindow" type="Panel" parent="RuneCanvas/ScientistPuzzle" unique_id=1909589384]
+offset_left = 118.0
+offset_top = 19.0
+offset_right = 588.0
+offset_bottom = 320.0
+
+[node name="LeftBlue" type="TextureButton" parent="RuneCanvas/ScientistPuzzle/PuzzleWindow" unique_id=862463802]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 13.000015
+offset_right = 398.0
+offset_bottom = 381.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("47_xfyrl")
+
+[node name="LeftRed" type="TextureButton" parent="RuneCanvas/ScientistPuzzle/PuzzleWindow" unique_id=1683973727]
+layout_mode = 0
+offset_left = 28.15
+offset_top = 116.055
+offset_right = 388.15
+offset_bottom = 476.055
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("48_v0wqp")
+
+[node name="LeftYellow" type="TextureButton" parent="RuneCanvas/ScientistPuzzle/PuzzleWindow" unique_id=640018041]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 250.0
+offset_right = 230.0
+offset_bottom = 441.68
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("49_3npk5")
+
+[node name="Right1" type="TextureButton" parent="RuneCanvas/ScientistPuzzle/PuzzleWindow" unique_id=1736185341]
+layout_mode = 0
+offset_left = 400.0
+offset_right = 449.845
+offset_bottom = 40.0
+
+[node name="Right2" type="TextureButton" parent="RuneCanvas/ScientistPuzzle/PuzzleWindow" unique_id=1717676309]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 79.0
+offset_right = 440.0
+offset_bottom = 119.0
+
+[node name="Right3" type="TextureButton" parent="RuneCanvas/ScientistPuzzle/PuzzleWindow" unique_id=938272963]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 200.0
+offset_right = 440.0
+offset_bottom = 240.0
+
+[node name="WireBlue" type="Line2D" parent="RuneCanvas/ScientistPuzzle" unique_id=206717471]
+default_color = Color(0.45416594, 0.50007355, 0.9250949, 1)
+
+[node name="WireYellow" type="Line2D" parent="RuneCanvas/ScientistPuzzle" unique_id=1576029792]
+default_color = Color(0.9, 0.87810004, 0.24299997, 1)
+
+[node name="WireRed" type="Line2D" parent="RuneCanvas/ScientistPuzzle" unique_id=1820892063]
+default_color = Color(1, 0.01999998, 0.01999998, 1)
+
+[node name="StatusLabel" type="Label" parent="RuneCanvas/ScientistPuzzle" unique_id=780807350]
+offset_left = 307.0
+offset_top = 21.0
+offset_right = 424.0
+offset_bottom = 44.0
+text = "Conecte os fios"
+
+[connection signal="body_entered" from="Control/UpView/SubViewport/FutureWorld/Era2/Fio1" to="Control/UpView/SubViewport/FutureWorld/Era2/Fio1" method="_on_body_entered"]
+[connection signal="body_exited" from="Control/UpView/SubViewport/FutureWorld/Era2/Fio1" to="Control/UpView/SubViewport/FutureWorld/Era2/Fio1" method="_on_body_exited"]
+[connection signal="body_entered" from="Control/UpView/SubViewport/FutureWorld/Era2/Fio2" to="Control/UpView/SubViewport/FutureWorld/Era2/Fio2" method="_on_body_entered"]
+[connection signal="body_exited" from="Control/UpView/SubViewport/FutureWorld/Era2/Fio2" to="Control/UpView/SubViewport/FutureWorld/Era2/Fio2" method="_on_body_exited"]
+[connection signal="body_entered" from="Control/UpView/SubViewport/FutureWorld/Era2/Fio3" to="Control/UpView/SubViewport/FutureWorld/Era2/Fio3" method="_on_body_entered"]
+[connection signal="body_exited" from="Control/UpView/SubViewport/FutureWorld/Era2/Fio3" to="Control/UpView/SubViewport/FutureWorld/Era2/Fio3" method="_on_body_exited"]
+[connection signal="body_entered" from="Control/UpView/SubViewport/FutureWorld/Era1/Terminal/Area2D" to="Control/UpView/SubViewport/FutureWorld/Era1/Terminal" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Control/UpView/SubViewport/FutureWorld/Era1/Terminal/Area2D" to="Control/UpView/SubViewport/FutureWorld/Era1/Terminal" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Control/UpView/SubViewport/FutureWorld/Era1/EntradaFarolCientista" to="Control/UpView/SubViewport/FutureWorld/Era1/EntradaFarolCientista" method="_on_body_entered"]
+[connection signal="body_entered" from="Control/UpView/SubViewport/FutureWorld/Era1/Drone/Area2D" to="Control/UpView/SubViewport/FutureWorld/Era1/Drone" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Control/UpView/SubViewport/FutureWorld/Era1/Drone/Area2D" to="Control/UpView/SubViewport/FutureWorld/Era1/Drone" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Control/DownView/SubViewportDown/PastWorld/Era1/Saida" to="Control/DownView/SubViewportDown/PastWorld/Era1/Saida" method="_on_body_entered"]
+[connection signal="body_entered" from="Control/DownView/SubViewportDown/PastWorld/Era2/EntradaFarolGuardiao" to="Control/DownView/SubViewportDown/PastWorld/Era2/EntradaFarolGuardiao" method="_on_body_entered"]

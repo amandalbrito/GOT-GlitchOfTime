@@ -1,0 +1,47 @@
+extends Area2D
+
+@export var rune_id := 1
+
+@onready var rune_puzzle = get_node(
+	"/root/Fase1/RuneCanvas/RunePuzzle"
+)
+
+var player_near := false
+
+
+func _process(_delta):
+
+	if player_near:
+
+		print("PLAYER PERTO")
+
+	if (
+		player_near
+		and Input.is_action_just_pressed(
+			"interact_guardiao"
+		)
+	):
+
+		print("APERTOU ENTER")
+
+		rune_puzzle.open_puzzle(
+			rune_id
+		)
+
+
+func _on_body_entered(body):
+
+	print("ENTROU")
+
+	if body.name == "Guardiao":
+
+		player_near = true
+
+
+func _on_body_exited(body):
+
+	if body.name == "Guardiao":
+
+		player_near = false
+
+		print("SAIU")

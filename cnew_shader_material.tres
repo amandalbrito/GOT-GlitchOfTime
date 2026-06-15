@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bmyh4r03uv46t"]
+
+[ext_resource type="Shader" uid="uid://8fua1caxfyhl" path="res://shaders/aura.gdshader" id="1_8an5w"]
+
+[resource]
+shader = ExtResource("1_8an5w")
+shader_parameter/aura_width = 10.0
+shader_parameter/aura_color = Color(0.014919667, 0.4065625, 0.6888557, 1)

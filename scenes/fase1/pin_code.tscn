@@ -1,17 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://cewwmfundrrn1"]
+[gd_scene format=3 uid="uid://cewwmfundrrn1"]
 
-[ext_resource type="Script" path="res://pin_code.gd" id="1_hphks"]
-[ext_resource type="Texture2D" uid="uid://blstef155raby" path="res://answer_paper.png" id="2_hc4xv"]
-[ext_resource type="Script" path="res://Sprite2D.gd" id="3_1w6fk"]
+[ext_resource type="Script" uid="uid://cordb2hkeinc0" path="res://scenes/fase1/pin_code.gd" id="1_lobw2"]
+[ext_resource type="Texture2D" uid="uid://blstef155raby" path="res://scenes/fase1/answer_paper.png" id="2_1rjuc"]
+[ext_resource type="Script" uid="uid://byd57fuwneyb3" path="res://scenes/fase1/Sprite2D.gd" id="3_l0g3d"]
 
-[node name="pin_code" type="Node2D"]
-script = ExtResource("1_hphks")
-allow_crossed_wires = false
+[node name="pin_code" type="Node2D" unique_id=1373946897]
+script = ExtResource("1_lobw2")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1860982324]
 visible = false
 position = Vector2(871, 418)
 rotation = 0.173493
 scale = Vector2(0.353333, 0.353333)
-texture = ExtResource("2_hc4xv")
-script = ExtResource("3_1w6fk")
+texture = ExtResource("2_1rjuc")
+script = ExtResource("3_l0g3d")

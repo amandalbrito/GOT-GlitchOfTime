@@ -31,12 +31,10 @@ var sound_on = true
 #var pegarItemTimer : Timer
 #var showed_inventory_pegarItem = false
 
-@onready var past_life_bar = $PlayerPastUI/LifeBar
-@onready var past_energy_bar = $PlayerPastUI/EnergyBar
+@onready var past_life_bar = $PlayerPastUI/EnergyBar
 @onready var past_grid = $PastInventory/GridContainer
 
 @onready var future_energy_bar = $PlayerFutureUI/EnergyBar
-@onready var future_stability_bar = $PlayerFutureUI/StabilityBar
 @onready var future_grid = $FutureInventory/GridContainer
 
 @onready var total_score_label = $ScoreUI/TotalLabel
@@ -45,6 +43,7 @@ var sound_on = true
 
 var instability = 100
 var echo_active = false
+
 
 func _ready() -> void:
 	Global.instability_changed.connect(set_instability)
@@ -67,8 +66,6 @@ func _process(delta: float) -> void:
 	#Adiciona Glitch na barra de instabilidade
 	if instability > 70:
 		$InstabilityBar.position.x += randf_range(-1, 1)
-		$PlayerFutureUI/StabilityBar.position.x += randf_range(-1, 1)
-		$PlayerFutureUI/EnergyBar.position.x += randf_range(-1, 1)
 	# Efeito piscando ECO
 	if echo_active:
 		var time = Time.get_ticks_msec() / 1000.0
@@ -117,11 +114,9 @@ func update_ui():
 #Atualizar barras dos Personagens
 func update_past_ui(life, energy):
 	past_life_bar.value = life
-	past_energy_bar.value = energy
 	
 func update_future_ui(energy, stability):
 	future_energy_bar.value = energy
-	future_stability_bar.value = stability
 	
 #Atualiza Inventário
 func update_inventory_ui():

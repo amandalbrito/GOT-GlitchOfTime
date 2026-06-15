@@ -4,13 +4,20 @@ extends Node2D
 @onready var fixed = $PonteConsertada
 @onready var collision = $"../StaticBody2D/CollisionShape2D"
 
+
 func _ready():
+
 	fixed.visible = false
 	broken.visible = true
 	collision.disabled = false
 
+
 func _process(_delta):
-	if Global.arvore_consertada and broken.visible:
+
+	if (
+		Global.arvore_consertada
+		and broken.visible
+	):
 
 		fixed.visible = true
 
@@ -31,5 +38,11 @@ func _process(_delta):
 		)
 
 		collision.disabled = true
-
 		broken.visible = false
+
+		# NPC reage
+		var npc = get_node("../NPC")
+
+		npc.get_node(
+			"Exclamation"
+		).visible = true

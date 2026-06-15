@@ -1,0 +1,641 @@
+[gd_scene format=3 uid="uid://b3d7f2k9mxp1q"]
+
+[ext_resource type="Script" path="res://scripts/fase3/fase_3.gd" id="1_fase3"]
+[ext_resource type="Script" path="res://scripts/fase3/boss_colapso.gd" id="2_boss"]
+[ext_resource type="Script" path="res://scripts/fase3/cristal_temporal.gd" id="3_cristal"]
+[ext_resource type="Script" path="res://scripts/fase3/plataforma_temporal.gd" id="4_plattemporal"]
+[ext_resource type="Script" path="res://scripts/fase3/trigger_saida.gd" id="5_trigger"]
+[ext_resource type="Script" uid="uid://d4g7an3gulax2" path="res://scripts/cientista.gd" id="6_cientista"]
+[ext_resource type="Script" uid="uid://ddayit13ndy0v" path="res://scripts/guardiao.gd" id="7_guardiao"]
+[ext_resource type="PackedScene" uid="uid://ctsqjovfw5ufg" path="res://scenes/main/hud.tscn" id="8_hud"]
+
+[ext_resource type="Texture2D" uid="uid://er1a4jj650ir" path="res://assets/Idle-cientista-Sheet.png" id="9_idlecientista"]
+[ext_resource type="Texture2D" uid="uid://c62rywxakaflm" path="res://assets/walk cientista sheet.png" id="10_walkcientista"]
+[ext_resource type="Texture2D" uid="uid://nj34iln3dt43" path="res://assets/IdleGuardião.png" id="11_idleguardiao"]
+[ext_resource type="Texture2D" uid="uid://dat1wqdka570t" path="res://assets/walk guardião.png" id="12_walkguardiao"]
+[ext_resource type="Texture2D" uid="uid://dnnq3hdu0ls1i" path="res://assets/jumpceleste.png" id="13_jumpcientista"]
+[ext_resource type="Texture2D" uid="uid://dx2xv561dr3kq" path="res://assets/jumpravi.png" id="14_jumpguardiao"]
+[ext_resource type="Texture2D" uid="uid://b2ilo6ur7so15" path="res://assets/Chao2.png" id="15_chao"]
+[ext_resource type="Texture2D" uid="uid://coh1af0cyepce" path="res://assets/GROUNDFUTURE-removebg-preview.png" id="16_groundfuture"]
+[ext_resource type="Texture2D" uid="uid://vtn6f6yref0s" path="res://assets/BACKGROUNDFUTURE.png" id="17_bgfuture"]
+[ext_resource type="Texture2D" uid="uid://c30scc3b06xna" path="res://assets/background 2.png" id="18_bg2"]
+[ext_resource type="Texture2D" uid="uid://b05mgsm5wekib" path="res://assets/shootcientista.png" id="19_shootcient"]
+[ext_resource type="Texture2D" uid="uid://bfsdajs6gulw6" path="res://defence.png" id="20_defence"]
+[ext_resource type="AudioStream" uid="uid://umefceeonpjb" path="res://sounds/shoot.mp3" id="21_shootsnd"]
+[ext_resource type="AudioStream" uid="uid://cs771oq0p7657" path="res://sounds/SoundEcho.ogg" id="22_echo"]
+
+; ─── Collision shapes ─────────────────────────────────────────────────────────
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cientista"]
+radius = 28.0
+height = 80.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_guardiao"]
+radius = 28.0
+height = 80.0
+
+[sub_resource type="RectangleShape2D" id="RectShape_chao_arena"]
+size = Vector2(2400, 50)
+
+[sub_resource type="RectangleShape2D" id="RectShape_chao_puzzle1"]
+size = Vector2(1200, 50)
+
+[sub_resource type="RectangleShape2D" id="RectShape_ponte"]
+size = Vector2(300, 30)
+
+[sub_resource type="RectangleShape2D" id="RectShape_plataforma"]
+size = Vector2(200, 30)
+
+[sub_resource type="RectangleShape2D" id="RectShape_parede_esq"]
+size = Vector2(50, 800)
+
+[sub_resource type="RectangleShape2D" id="RectShape_parede_dir"]
+size = Vector2(50, 800)
+
+[sub_resource type="CircleShape2D" id="CircleShape_cristal"]
+radius = 50.0
+
+[sub_resource type="RectangleShape2D" id="RectShape_trigger"]
+size = Vector2(80, 120)
+
+[sub_resource type="RectangleShape2D" id="RectShape_onda"]
+size = Vector2(120, 40)
+
+; ─── AnimatedSprite frames ────────────────────────────────────────────────────
+[sub_resource type="SpriteFrames" id="SpriteFrames_cientista"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_idlecientista")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_walkcientista")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_jumpcientista")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_guardiao"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_idleguardiao")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_walkguardiao")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_jumpguardiao")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_boss"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_idleguardiao")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}]
+
+; ══════════════════════════════════════════════════════════════════════════════
+; CENA RAIZ
+; ══════════════════════════════════════════════════════════════════════════════
+[node name="Fase3" type="Node2D"]
+script = ExtResource("1_fase3")
+
+; ─── CÂMERA ───────────────────────────────────────────────────────────────────
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(600, 300)
+zoom = Vector2(0.7, 0.7)
+
+; ─── BACKGROUND GLITCH (overlay colorido que pisca) ──────────────────────────
+[node name="GlitchOverlay" type="ColorRect" parent="."]
+z_index = 10
+color = Color(0.2, 0.0, 0.6, 0.0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+; ─── FADE ─────────────────────────────────────────────────────────────────────
+[node name="Fade" type="CanvasLayer" parent="."]
+layer = 99
+
+[node name="FadeRect" type="ColorRect" parent="Fade"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 1)
+
+[node name="FlashRect" type="ColorRect" parent="Fade"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.3, 0.6, 1.0, 0.0)
+visible = false
+
+; ─── DEATH SCREEN ─────────────────────────────────────────────────────────────
+[node name="DeathScreen" type="ColorRect" parent="."]
+z_index = 50
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.85)
+visible = false
+
+[node name="Label" type="Label" parent="DeathScreen"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -30.0
+offset_right = 120.0
+offset_bottom = 30.0
+text = "O colapso venceu.\n[R] para tentar novamente"
+horizontal_alignment = 1
+
+; ─── HUD ──────────────────────────────────────────────────────────────────────
+[node name="HUD" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="HUDScene" parent="HUD" instance=ExtResource("8_hud")]
+
+[node name="BossBar" type="ProgressBar" parent="HUD"]
+anchors_preset = -1
+anchor_left = 0.1
+anchor_right = 0.9
+anchor_top = 0.02
+anchor_bottom = 0.06
+min_value = 0.0
+max_value = 99.0
+value = 99.0
+visible = false
+
+[node name="BossLabel" type="Label" parent="HUD/BossBar"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_right = 100.0
+offset_top = 4.0
+text = "Guardião do Colapso"
+horizontal_alignment = 1
+
+; ─── CUTSCENE LAYER ───────────────────────────────────────────────────────────
+[node name="CutsceneLayer" type="CanvasLayer" parent="."]
+layer = 20
+visible = false
+
+[node name="DialogueBox" type="PanelContainer" parent="CutsceneLayer"]
+anchors_preset = -1
+anchor_left = 0.1
+anchor_right = 0.9
+anchor_top = 0.75
+anchor_bottom = 0.92
+
+[node name="Label" type="Label" parent="CutsceneLayer/DialogueBox"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+; ══════════════════════════════════════════════════════════════════════════════
+; ARENA COMPARTILHADA (os dois personagens ficam aqui)
+; ══════════════════════════════════════════════════════════════════════════════
+[node name="Arena" type="Node2D" parent="."]
+position = Vector2(0, 0)
+
+; ─── BACKGROUNDS ──────────────────────────────────────────────────────────────
+[node name="BgFuture" type="Sprite2D" parent="Arena"]
+position = Vector2(800, 250)
+scale = Vector2(1.4, 1.2)
+texture = ExtResource("17_bgfuture")
+
+[node name="BgPast" type="Sprite2D" parent="Arena"]
+position = Vector2(800, 250)
+scale = Vector2(1.4, 1.2)
+modulate = Color(0.6, 0.5, 0.8, 0.6)
+texture = ExtResource("18_bg2")
+
+; ─── CHÃO PRINCIPAL ───────────────────────────────────────────────────────────
+[node name="ChaoArena" type="StaticBody2D" parent="Arena"]
+position = Vector2(600, 500)
+
+[node name="Sprite2D" type="Sprite2D" parent="Arena/ChaoArena"]
+texture = ExtResource("15_chao")
+scale = Vector2(4.0, 1.0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arena/ChaoArena"]
+shape = SubResource("RectShape_chao_arena")
+
+; ─── PAREDE ESQUERDA ──────────────────────────────────────────────────────────
+[node name="ParedEsq" type="StaticBody2D" parent="Arena"]
+position = Vector2(-25, 200)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arena/ParedEsq"]
+shape = SubResource("RectShape_parede_esq")
+
+; ─── PAREDE DIREITA ───────────────────────────────────────────────────────────
+[node name="ParedDir" type="StaticBody2D" parent="Arena"]
+position = Vector2(1825, 200)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arena/ParedDir"]
+shape = SubResource("RectShape_parede_dir")
+
+; ─── CIENTISTA ────────────────────────────────────────────────────────────────
+[node name="Cientista" type="CharacterBody2D" parent="Arena"]
+position = Vector2(200, 400)
+script = ExtResource("6_cientista")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arena/Cientista"]
+shape = SubResource("CapsuleShape2D_cientista")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Arena/Cientista"]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_cientista")
+animation = &"default"
+
+[node name="ShootPoint" type="Marker2D" parent="Arena/Cientista"]
+position = Vector2(30, 0)
+
+[node name="Bullet" type="Sprite2D" parent="Arena/Cientista"]
+texture = ExtResource("19_shootcient")
+scale = Vector2(0.4, 0.4)
+visible = false
+
+[node name="ShootSound" type="AudioStreamPlayer2D" parent="Arena/Cientista"]
+stream = ExtResource("21_shootsnd")
+volume_db = -6.0
+
+; ─── GUARDIÃO ─────────────────────────────────────────────────────────────────
+[node name="Guardiao" type="CharacterBody2D" parent="Arena"]
+position = Vector2(350, 400)
+script = ExtResource("7_guardiao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arena/Guardiao"]
+shape = SubResource("CapsuleShape2D_guardiao")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Arena/Guardiao"]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_guardiao")
+animation = &"default"
+
+[node name="ShootPoint" type="Marker2D" parent="Arena/Guardiao"]
+position = Vector2(30, 0)
+
+[node name="Bullet" type="Sprite2D" parent="Arena/Guardiao"]
+texture = ExtResource("20_defence")
+scale = Vector2(0.4, 0.4)
+visible = false
+
+[node name="ShootSound" type="AudioStreamPlayer2D" parent="Arena/Guardiao"]
+stream = ExtResource("21_shootsnd")
+volume_db = -6.0
+
+; ══════════════════════════════════════════════════════════════════════════════
+; PUZZLE 1 — PONTE DO COLAPSO
+; ══════════════════════════════════════════════════════════════════════════════
+[node name="Puzzle1" type="Node2D" parent="."]
+position = Vector2(0, 0)
+
+[node name="ChaoP1" type="StaticBody2D" parent="Puzzle1"]
+position = Vector2(200, 500)
+
+[node name="Sprite2D" type="Sprite2D" parent="Puzzle1/ChaoP1"]
+texture = ExtResource("16_groundfuture")
+scale = Vector2(2.0, 1.0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle1/ChaoP1"]
+shape = SubResource("RectShape_chao_puzzle1")
+
+; ─── PONTE QUEBRADA ───────────────────────────────────────────────────────────
+[node name="PonteQuebrada" type="Sprite2D" parent="Puzzle1"]
+position = Vector2(900, 460)
+texture = ExtResource("15_chao")
+modulate = Color(0.7, 0.3, 0.3, 1.0)
+scale = Vector2(0.6, 0.4)
+
+[node name="PonteConsertada" type="Sprite2D" parent="Puzzle1"]
+position = Vector2(900, 460)
+texture = ExtResource("15_chao")
+modulate = Color(0.4, 0.8, 1.0, 0.0)
+scale = Vector2(0.6, 0.4)
+visible = false
+
+[node name="PonteCollision" type="StaticBody2D" parent="Puzzle1"]
+position = Vector2(900, 480)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle1/PonteCollision"]
+shape = SubResource("RectShape_ponte")
+disabled = true
+
+; ─── TERMINAL PUZZLE 1 ────────────────────────────────────────────────────────
+; (reutiliza terminal.gd com platform_path apontando para a ponte)
+[node name="Terminal" type="Node2D" parent="Puzzle1"]
+position = Vector2(700, 430)
+
+[node name="Sprite2D" type="Sprite2D" parent="Puzzle1/Terminal"]
+texture = ExtResource("15_chao")
+scale = Vector2(0.3, 0.5)
+modulate = Color(0.2, 1.0, 0.4, 1.0)
+
+[node name="Area2D" type="Area2D" parent="Puzzle1/Terminal"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle1/Terminal/Area2D"]
+shape = SubResource("RectShape_trigger")
+
+; (o terminal.gd existente será reutilizado via script inline abaixo)
+; Script inline simplificado para o terminal da fase 3
+[node name="TerminalScript" type="Node" parent="Puzzle1/Terminal"]
+
+; ══════════════════════════════════════════════════════════════════════════════
+; PUZZLE 2 — PLATAFORMA TEMPORAL
+; ══════════════════════════════════════════════════════════════════════════════
+[node name="Puzzle2" type="Node2D" parent="."]
+position = Vector2(1200, 0)
+
+[node name="ChaoP2Esq" type="StaticBody2D" parent="Puzzle2"]
+position = Vector2(100, 500)
+
+[node name="Sprite2D" type="Sprite2D" parent="Puzzle2/ChaoP2Esq"]
+texture = ExtResource("16_groundfuture")
+scale = Vector2(1.0, 1.0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle2/ChaoP2Esq"]
+shape = SubResource("RectShape_chao_puzzle1")
+
+[node name="ChaoP2Dir" type="StaticBody2D" parent="Puzzle2"]
+position = Vector2(700, 500)
+
+[node name="Sprite2D" type="Sprite2D" parent="Puzzle2/ChaoP2Dir"]
+texture = ExtResource("16_groundfuture")
+scale = Vector2(1.0, 1.0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle2/ChaoP2Dir"]
+shape = SubResource("RectShape_chao_puzzle1")
+
+; ─── PLATAFORMA TEMPORAL (pisca) ─────────────────────────────────────────────
+[node name="PlataformaTemporal" type="Node2D" parent="Puzzle2"]
+position = Vector2(400, 360)
+script = ExtResource("4_plattemporal")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Puzzle2/PlataformaTemporal"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle2/PlataformaTemporal/StaticBody2D"]
+shape = SubResource("RectShape_plataforma")
+
+[node name="Sprite2D" type="Sprite2D" parent="Puzzle2/PlataformaTemporal"]
+texture = ExtResource("15_chao")
+modulate = Color(0.5, 0.8, 1.0, 1.0)
+scale = Vector2(0.4, 0.3)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Puzzle2/PlataformaTemporal"]
+
+; ─── TERMINAL PUZZLE 2 ────────────────────────────────────────────────────────
+[node name="Terminal2" type="Node2D" parent="Puzzle2"]
+position = Vector2(200, 430)
+
+[node name="Sprite2D" type="Sprite2D" parent="Puzzle2/Terminal2"]
+texture = ExtResource("15_chao")
+scale = Vector2(0.3, 0.5)
+modulate = Color(0.2, 1.0, 0.4, 1.0)
+
+[node name="Area2D" type="Area2D" parent="Puzzle2/Terminal2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle2/Terminal2/Area2D"]
+shape = SubResource("RectShape_trigger")
+
+; ─── TRIGGER SAÍDA P2 ─────────────────────────────────────────────────────────
+[node name="TriggerSaida" type="Area2D" parent="Puzzle2"]
+position = Vector2(850, 430)
+script = ExtResource("5_trigger")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puzzle2/TriggerSaida"]
+shape = SubResource("RectShape_trigger")
+
+; ══════════════════════════════════════════════════════════════════════════════
+; BOSS — GUARDIÃO DO COLAPSO
+; ══════════════════════════════════════════════════════════════════════════════
+[node name="Boss" type="Node2D" parent="."]
+position = Vector2(2200, 0)
+
+; ─── ARENA DO BOSS ────────────────────────────────────────────────────────────
+[node name="Arena" type="Node2D" parent="Boss"]
+
+[node name="Chao" type="StaticBody2D" parent="Boss/Arena"]
+position = Vector2(600, 500)
+
+[node name="Sprite2D" type="Sprite2D" parent="Boss/Arena/Chao"]
+texture = ExtResource("15_chao")
+scale = Vector2(3.5, 1.0)
+modulate = Color(0.6, 0.4, 0.9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Arena/Chao"]
+shape = SubResource("RectShape_chao_arena")
+
+; SPAWNS para posicionar personagens após cutscene
+[node name="SpawnGuardiao" type="Marker2D" parent="Boss/Arena"]
+position = Vector2(400, 430)
+
+[node name="SpawnCientista" type="Marker2D" parent="Boss/Arena"]
+position = Vector2(550, 430)
+
+[node name="ParedEsqBoss" type="StaticBody2D" parent="Boss/Arena"]
+position = Vector2(-25, 200)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Arena/ParedEsqBoss"]
+shape = SubResource("RectShape_parede_esq")
+
+[node name="ParedDirBoss" type="StaticBody2D" parent="Boss/Arena"]
+position = Vector2(1225, 200)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Arena/ParedDirBoss"]
+shape = SubResource("RectShape_parede_dir")
+
+; ─── BOSS ─────────────────────────────────────────────────────────────────────
+[node name="GuardiaoDoCOlapso" type="CharacterBody2D" parent="Boss"]
+position = Vector2(600, 300)
+script = ExtResource("2_boss")
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/GuardiaoDoCOlapso"]
+shape = SubResource("CapsuleShape2D_guardiao")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Boss/GuardiaoDoCOlapso"]
+scale = Vector2(2.0, 2.0)
+sprite_frames = SubResource("SpriteFrames_boss")
+animation = &"idle"
+modulate = Color(0.5, 0.3, 0.8, 1.0)
+
+; ─── ONDA TEMPORAL (Ataque 1) ─────────────────────────────────────────────────
+[node name="OndaTemporal" type="Sprite2D" parent="Boss"]
+position = Vector2(100, 420)
+texture = ExtResource("15_chao")
+modulate = Color(0.4, 0.2, 0.9, 0.8)
+scale = Vector2(0.5, 0.3)
+visible = false
+
+; ─── FRAGMENTOS (Ataque 2) ────────────────────────────────────────────────────
+[node name="Fragmento1" type="Sprite2D" parent="Boss"]
+position = Vector2(300, -200)
+texture = ExtResource("20_defence")
+modulate = Color(0.6, 0.3, 0.9, 1.0)
+scale = Vector2(0.8, 0.8)
+visible = false
+
+[node name="Fragmento2" type="Sprite2D" parent="Boss"]
+position = Vector2(600, -200)
+texture = ExtResource("20_defence")
+modulate = Color(0.4, 0.2, 0.8, 1.0)
+scale = Vector2(0.7, 0.7)
+visible = false
+
+[node name="Fragmento3" type="Sprite2D" parent="Boss"]
+position = Vector2(900, -200)
+texture = ExtResource("20_defence")
+modulate = Color(0.7, 0.4, 1.0, 1.0)
+scale = Vector2(0.9, 0.9)
+visible = false
+
+; ─── CRISTAL 1 ────────────────────────────────────────────────────────────────
+[node name="Cristal1" type="Node2D" parent="Boss"]
+position = Vector2(150, 380)
+script = ExtResource("3_cristal")
+
+[node name="Sprite2D" type="Sprite2D" parent="Boss/Cristal1"]
+texture = ExtResource("20_defence")
+modulate = Color(0.4, 0.7, 1.0, 1.0)
+scale = Vector2(0.6, 0.8)
+
+[node name="Glow" type="PointLight2D" parent="Boss/Cristal1"]
+color = Color(0.4, 0.7, 1.0, 1.0)
+energy = 0.8
+texture_scale = 1.5
+
+[node name="AreaGuardiao" type="Area2D" parent="Boss/Cristal1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Cristal1/AreaGuardiao"]
+shape = SubResource("CircleShape_cristal")
+
+[node name="AreaCientista" type="Area2D" parent="Boss/Cristal1"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Boss/Cristal1/AreaCientista"]
+shape = SubResource("CircleShape_cristal")
+
+[node name="HintGuardiao" type="Label" parent="Boss/Cristal1"]
+position = Vector2(-60, -60)
+text = "[Enter] Ativar"
+visible = false
+
+[node name="HintCientista" type="Label" parent="Boss/Cristal1"]
+position = Vector2(-40, -80)
+text = "[E] Quebrar"
+modulate = Color(0.3, 1.0, 0.4, 1.0)
+visible = false
+
+; ─── CRISTAL 2 ────────────────────────────────────────────────────────────────
+[node name="Cristal2" type="Node2D" parent="Boss"]
+position = Vector2(600, 250)
+script = ExtResource("3_cristal")
+
+[node name="Sprite2D" type="Sprite2D" parent="Boss/Cristal2"]
+texture = ExtResource("20_defence")
+modulate = Color(0.4, 0.7, 1.0)
+scale = Vector2(0.6, 0.8)
+
+[node name="Glow" type="PointLight2D" parent="Boss/Cristal2"]
+color = Color(0.4, 0.7, 1.0)
+energy = 0.8
+texture_scale = 1.5
+
+[node name="AreaGuardiao" type="Area2D" parent="Boss/Cristal2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Cristal2/AreaGuardiao"]
+shape = SubResource("CircleShape_cristal")
+
+[node name="AreaCientista" type="Area2D" parent="Boss/Cristal2"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Boss/Cristal2/AreaCientista"]
+shape = SubResource("CircleShape_cristal")
+
+[node name="HintGuardiao" type="Label" parent="Boss/Cristal2"]
+position = Vector2(-60, -60)
+text = "[Enter] Ativar"
+visible = false
+
+[node name="HintCientista" type="Label" parent="Boss/Cristal2"]
+position = Vector2(-40, -80)
+text = "[E] Quebrar"
+modulate = Color(0.3, 1.0, 0.4)
+visible = false
+
+; ─── CRISTAL 3 ────────────────────────────────────────────────────────────────
+[node name="Cristal3" type="Node2D" parent="Boss"]
+position = Vector2(1050, 380)
+script = ExtResource("3_cristal")
+
+[node name="Sprite2D" type="Sprite2D" parent="Boss/Cristal3"]
+texture = ExtResource("20_defence")
+modulate = Color(0.4, 0.7, 1.0)
+scale = Vector2(0.6, 0.8)
+
+[node name="Glow" type="PointLight2D" parent="Boss/Cristal3"]
+color = Color(0.4, 0.7, 1.0)
+energy = 0.8
+texture_scale = 1.5
+
+[node name="AreaGuardiao" type="Area2D" parent="Boss/Cristal3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Cristal3/AreaGuardiao"]
+shape = SubResource("CircleShape_cristal")
+
+[node name="AreaCientista" type="Area2D" parent="Boss/Cristal3"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Boss/Cristal3/AreaCientista"]
+shape = SubResource("CircleShape_cristal")
+
+[node name="HintGuardiao" type="Label" parent="Boss/Cristal3"]
+position = Vector2(-60, -60)
+text = "[Enter] Ativar"
+visible = false
+
+[node name="HintCientista" type="Label" parent="Boss/Cristal3"]
+position = Vector2(-40, -80)
+text = "[E] Quebrar"
+modulate = Color(0.3, 1.0, 0.4)
+visible = false

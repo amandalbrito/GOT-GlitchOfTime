@@ -34,14 +34,32 @@ func _process(delta):
 		consertar_arvore()
 
 func consertar_arvore():
+
 	consertada = true
 	fixed.visible = true
 
 	var tween = create_tween()
-	tween.tween_property(broken, "modulate:a", 0.0, 0.5)
-	tween.parallel().tween_property(fixed, "modulate:a", 1.0, 0.5)
+
+	tween.tween_property(
+		broken,
+		"modulate:a",
+		0.0,
+		0.5
+	)
+
+	tween.parallel().tween_property(
+		fixed,
+		"modulate:a",
+		1.0,
+		0.5
+	)
 
 	Global.arvore_consertada = true
+
+	# atualiza barra
+	get_tree().current_scene.arvore_consertada = true
+	get_tree().current_scene.update_instability()
+
 	print("Árvore consertada!")
 
 func mostrar_mensagem(msg: String, tempo: float = 3.0):
@@ -57,7 +75,7 @@ func mostrar_sequencia():
 
 	await get_tree().create_timer(3.0).timeout
 
-	mostrar_mensagem("Pressione ENTER para restaurar a árvore", 3)
+	mostrar_mensagem("Pressione ENTER ou [O] para restaurar a árvore", 3)
 
 func _on_timer_timeout() -> void:
 	if mensagem:
